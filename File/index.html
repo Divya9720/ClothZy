@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClothZy | E-commerce Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courgette&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="#">Cloth<span style="color: #6c63ff;">Zy</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+                    <!-- Dropdown starts here -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="service.html">Services</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown ends here -->
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="account.html"><i class="bi bi-person"></i>My
+                            Account</a></li>
+                </ul>
+                <a href="cart.html" class="btn btn-primary">
+                    <i class="bi bi-cart"></i> Cart (<span id="cart-count">0</span>)
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container align-items-center">
+            <div class="d-flex flex-grow-1 mx-4">
+                <select class="form-select w-auto me-2" onchange="location = this.value;">
+                    <option selected disabled>All Categories</option>
+                    <option value="men/men.html">Men</option>
+                    <option value="women/women.html">Women</option>
+                    <option value="kids/kids.html">Kids</option>
+                    <option value="accessories/accessories.html">Accessories</option>
+
+                </select>
+                <input type="text" id="searchBox" class="form-control search-box" placeholder="Search for Product..." />
+                <button onclick="searchNow()" class="btn btn-light ms-2"
+                    style="background-color:#6c63ff; border-color:#6c63ff;">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+
+            <div class="d-flex">
+                <a href="#" class="btn btn-light me-2"><i class="bi bi-heart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Carousel + Promo Box -->
+    <div class="container-fluid mb-4">
+        <div class="row justify-content-center">
+            <!-- Left: Carousel -->
+            <div class="col-md-8">
+                <div id="clothzyCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://i.ytimg.com/vi/U5Q3Du2W9a0/maxresdefault.jpg" class="d-block w-100"
+                                alt="Slide 1" style="height:500px; object-fit:cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2 style="color:white;">New Season, New Style</h2>
+                                <p style="color:white;">Discover the latest trends in fashion</p>
+                                <a class="btn btn-primary" href="products.html"
+                                    style="background-color:#6c63ff; border-color:#6c63ff;">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpaperaccess.com/full/1448061.jpg" class="d-block w-100" alt="Slide 2"
+                                style="height:500px; object-fit:cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Sale</h2>
+                                <p>Up to 50% off</p>
+                                <a class="btn btn-light" href="#products">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.mother.ly/wp-content/uploads/2019/07/the-best-prime-day-clothes-for-kids-featured.webp"
+                                class="d-block w-100" alt="Slide 3" style="height:500px; object-fit:cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Sale</h2>
+                                <p>Up to 50% off</p>
+                                <a class="btn btn-light" href="#products">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpapers.com/images/hd/fashion-dress-pictures-pepgp4308oquiccy.jpg"
+                                class="d-block w-100" alt="Slide 4" style="height:500px; object-fit:cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Sale</h2>
+                                <p>Up to 50% off</p>
+                                <a class="btn btn-light" href="#products">Explore</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://wallpaperbat.com/img/518128-fashion-hd-wallpaper.jpg"
+                                class="d-block w-100" alt="Slide 5" style="height:500px; object-fit:cover;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Sale</h2>
+                                <p>Up to 50% off</p>
+                                <a class="btn btn-light" href="#products">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#clothzyCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#clothzyCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Box -->
+            <div class="col-md-4 bg-dark">
+                <div class="row">
+                    <!-- First Box -->
+                    <div class="col-md-12 mb-3 " style="border-bottom: 3px solid white;">
+                        <div class="text-white text-center pt-5 pb-5 position-relative rounded"
+                            style="background-image: url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150849915.jpg'); background-size: cover; background-position: center;">
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0">New</span>
+                            <h5 class="mt-4">Shop to Get<br>What You Love</h5>
+                            <p class="mb-0 fw-bold">Trendy styles at best prices</p>
+                            <a class="btn btn-light mt-2" href="products.html">Shop Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Second Box -->
+                    <div class="col-md-12">
+                        <div class="text-black pt-5 pb-5 pe-3 h-100 position-relative rounded text-end"
+                            style="background-image: url('https://static.vecteezy.com/system/resources/previews/011/911/000/large_2x/full-street-fashion-slender-figure-beautiful-face-graceful-girl-sitting-on-isolated-white-background-portrait-of-female-model-in-studio-plastic-surgery-and-aesthetic-cosmetology-copy-space-free-photo.jpg'); background-size: cover; background-position: center;">
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0">New</span>
+                            <p class="mb-0 fw-bold">Accessories <br>&<br> Fancy Garments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Category Icon Row -->
+    <div class="bg-light py-3 mb-4">
+        <div class="container d-flex justify-content-between text-center category-icons">
+            <div>
+
+                <small><a href="men/men.html"> <i class="bi bi-gender-male"></i></a>Men</small>
+            </div>
+            <div>
+
+                <small><a href="women/women.html"> <i class="bi bi-gender-female"></i></a>Women</small>
+            </div>
+            <div>
+
+                <small><a href="kids/kids.html"> <i class="bi bi-emoji-smile"></i></a>Kids</small>
+            </div>
+            <div>
+
+                <small><a href="accessories/bags.html"> <i class="bi bi-bag"></i></a>Bags</small>
+            </div>
+            <div>
+
+                <small><a href="accessories/watches.html"> <i class="bi bi-watch"></i></a>Watches</small>
+            </div>
+            <div>
+
+                <small><a href="products.html"> <i class="bi bi-lightning"></i></a>Flash Sale</small>
+            </div>
+            <div>
+                <small><a href="service.html"> <i class="bi bi-star"></i></a>Best Sellers</small>
+            </div>
+        </div>
+    </div>
+
+    <!--Owl-carousel-->
+    <div class="owl-carousel">
+        <div class="square-card"><img src="https://i.pinimg.com/originals/80/cd/a3/80cda321a13abcf169c9919edd49d5e1.jpg"
+                alt="Image 1" class="square-img"></div>
+        <div class="square-card"><img
+                src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2a215574/images/Titan/Catalog/90176KM01_1.jpg?sw=600&sh=600"
+                alt="Image 2" class="square-img"></div>
+        <div class="square-card"><img src="https://i.ebayimg.com/images/g/6U4AAOSwn0FfNHv3/s-l1600.jpg" alt="Image 3"
+                class="square-img"></div>
+        <div class="square-card"><img src="https://images-na.ssl-images-amazon.com/images/I/71+vdvSH30L._UL1500_.jpg"
+                alt="Image 4" class="square-img"></div>
+        <div class="square-card"><img src="https://i.pinimg.com/originals/db/57/f3/db57f30ae3f813bca7e3bcd79d3e7c79.jpg"
+                alt="Image 5" class="square-img"></div>
+        <div class="square-card"><img
+                src="https://s.alicdn.com/@sc04/kf/H5e394abb9cc142a2b4763e82ed3ff617S.jpg_720x720q50.jpg" alt="Image 6"
+                class="square-img"></div>
+        <div class="square-card"><img src="https://i.pinimg.com/736x/8e/3e/62/8e3e625638b43bbd2c5545a7576b1285.jpg"
+                alt="Image 7" class="square-img"></div>
+        <div class="square-card"><img
+                src="https://www.soletopia.com/wp-content/uploads/2014/06/madras-plaid-and-beard-dotted-ps-mens-fashion-blog.jpg"
+                alt="Image 8" class="square-img"></div>
+        <div class="square-card"><img src="https://i.pinimg.com/originals/c5/eb/a6/c5eba61dd2cafc69f7f0f3e81bb617fc.jpg"
+                alt="Image 9" class="square-img"></div>
+        <div class="square-card"><img
+                src="https://images.fashiontiy.com/products/T103D36A16/color_6.jpg?x-oss-process=image/interlace,1/format,webp"
+                alt="Image 10" class="square-img"></div>
+        <div class="square-card"><img
+                src="https://i.etsystatic.com/49385327/r/il/4511ee/5724308846/il_600x600.5724308846_hfyg.jpg"
+                alt="Image 11" class="square-img"></div>
+        <div class="square-card"><img src="https://i.pinimg.com/originals/e1/f0/31/e1f03159f748444c7766944f4b7102ff.jpg"
+                alt="Image 12" class="square-img"></div>
+        <div class="square-card"><img src="https://i.pinimg.com/originals/90/85/76/9085764df6c2669961f01db5baa7845f.jpg"
+                alt="Image 13" class="square-img"></div>
+        <div class="square-card"><img src="https://images.alphacoders.com/957/957128.jpg" alt="Image 14"
+                class="square-img"></div>
+        <div class="square-card"><img
+                src="https://ae01.alicdn.com/kf/HTB1LjfvRVXXXXaWXpXXq6xXFXXXo/2016-Summer-New-Kids-Clothes-Baby-Girls-Princess-Dress-Floral-Short-Sleeve-Children-Clothing-Bow-Voile.jpg"
+                alt="Image 15" class="square-img"></div>
+    </div>
+
+    <!-- Categories Section -->
+    <section class="py-5" id="categories">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold display-6">-Shop by Category-</h2>
+            <div class="row g-4">
+                <!-- Category Card -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card card border-0 shadow-lg overflow-hidden rounded-4">
+                        <div class="category-image">
+                            <img src="https://i.pinimg.com/originals/1f/14/60/1f1460a81912f2b9bca3f4944c5d85bd.jpg"
+                                alt="Men">
+                            <div class="overlay">
+                                <h5 class="text-white"><a href="men/men.html" style="color:#fff">Men</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card card border-0 shadow-lg overflow-hidden rounded-4">
+                        <div class="category-image">
+                            <img src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/11/skinny-kim-kim-kardashians-waist-774682469.jpg"
+                                alt="Women">
+                            <div class="overlay">
+                                <h5 class="text-white"><a href="women/women.html" style="color:#fff">Women</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card card border-0 shadow-lg overflow-hidden rounded-4">
+                        <div class="category-image">
+                            <img src="https://i.pinimg.com/474x/79/6d/94/796d94ad3a1e56873546325e48643ac4--baby-boy-pajamas-kids-clothes-boys.jpg"
+                                alt="Kids">
+                            <div class="overlay">
+                                <h5 class="text-white"><a href="kids/kids.html" style="color:#fff">Kids</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card card border-0 shadow-lg overflow-hidden rounded-4">
+                        <div class="category-image">
+                            <img src="https://corporate.jaihindretail.com/images/Collections/Accessories/Accessories.jpg"
+                                alt="Accessories">
+                            <div class="overlay">
+                                <h5 class="text-white"><a href="accessories/accessories.html"
+                                        style="color:#fff">Accessories</a></h5>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--Features Products-->
+    <section class="py-5 bg-light" id="products">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold display-6">-Featured Products-</h2>
+            <div class="row g-4">
+
+                <!-- Product Card -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top" style="height: 220px;">
+                            <img src="https://alexnld.com/wp-content/uploads/2019/12/ad70fd15-271b-4676-acb9-547ba4b8a6dd.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;" alt="Stylish T-Shirt">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">₹999</span>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between"
+                            style="height: 150px;">
+                            <h5 class="card-title">Stylish T-Shirt</h5>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Stylish T-Shirt" data-price="999"
+                                data-image="https://alexnld.com/wp-content/uploads/2019/12/ad70fd15-271b-4676-acb9-547ba4b8a6dd.jpg">
+                                Add to Cart
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Product Card -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top" style="height: 220px;">
+                            <img src="https://i.pinimg.com/736x/99/6b/2d/996b2d0197ef7683bae47dd127a43811.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;" alt="Denim Jeans">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">₹1,499</span>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between"
+                            style="height: 150px;">
+                            <h5 class="card-title">Denim Jeans</h5>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Denim Jeans" data-price="1,499"
+                                data-image="https://i.pinimg.com/736x/99/6b/2d/996b2d0197ef7683bae47dd127a43811.jpg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top" style="height: 220px;">
+                            <img src="https://i.pinimg.com/736x/71/4d/bf/714dbf777d36b5787ed5efd9e10b8164--red-dress-dress-prom.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;" alt="Evening Dress">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">₹1,899</span>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between"
+                            style="height: 150px;">
+                            <h5 class="card-title">Evening Party Dress</h5>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Evening Party Dress"
+                                data-price="1,899"
+                                data-image="https://i.pinimg.com/736x/71/4d/bf/714dbf777d36b5787ed5efd9e10b8164--red-dress-dress-prom.jpg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top" style="height: 220px;">
+                            <img src="https://cdn.mos.cms.futurecdn.net/t3k7Xgm5bQSWc6QKyziktj-1200-80.jpg"
+                                style="width: 100%; height: 100%; object-fit: cover;" alt="Running Shoes">
+                            <span class="badge bg-danger position-absolute top-0 start-0 m-2">₹1,299</span>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column justify-content-between"
+                            style="height: 150px;">
+                            <h5 class="card-title">Running Shoes</h5>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Running Shoes" data-price="1,299"
+                                data-image="https://cdn.mos.cms.futurecdn.net/t3k7Xgm5bQSWc6QKyziktj-1200-80.jpg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #0d0d0d; color: #ccc; padding-top: 50px; font-family: 'Segoe UI', sans-serif;">
+
+        <!-- Top Info Boxes -->
+        <div class="container mb-5">
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-4">
+                    <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
+                        <i class="bi bi-telephone-fill" style="font-size: 1.5rem; color: #6c63ff;"></i>
+                        <h5 class="mt-2">Call Center</h5>
+                        <p style="color: #6c63ff;">(222) 118 899 000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
+                        <i class="bi bi-truck" style="font-size: 1.5rem; color: #6c63ff;"></i>
+                        <h5 class="mt-2">Free Delivery</h5>
+                        <p>Free delivery on orders over $100</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
+                        <i class="bi bi-gift-fill" style="font-size: 1.5rem; color: #6c63ff;"></i>
+                        <h5 class="mt-2">Gift Cards</h5>
+                        <p><span style="color: #6c63ff;">SAVE UP TO 20%</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Links -->
+        <div class="container text-center text-md-start pb-5">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <h6 style="color: #fff;">Get to Know Us</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none text-secondary">About Us</a></li>
+                        <li><a href="service.html" class="text-decoration-none text-secondary">Our Services</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-secondary">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 style="color: #fff;">Customer Service</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="account.html" class="text-decoration-none text-secondary">My Account</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Order Tracking</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-decoration-none text-secondary">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 style="color: #fff;">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="../men/men.html" class="text-decoration-none text-secondary">Men's Wear</a></li>
+                        <li><a href="../women/women.html" class="text-decoration-none text-secondary">Women's Wear</a></li>
+                        <li><a href="../kids/kids.html" class="text-decoration-none text-secondary">Kid's Wear</a></li>
+                        <li><a href="../accessories/accessories.html" class="text-decoration-none text-secondary">Accessories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-3 col-sm-6">
+                    <h6 style="color: #fff;">Sign up to Newsletter</h6>
+                    <form class="d-flex mb-3" style="gap: 5px;">
+                        <input type="email" class="form-control" placeholder="Your Email Address..."
+                            style="background-color: #1f1f1f; border: none; color: #ccc;">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color:#6c63ff; border-color:#6c63ff;">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </form>
+                    <p class="small text-secondary">
+                        Stay up to date with all the latest offers and updates.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#"><i class="bi bi-facebook text-white"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-white"></i></a>
+                        <a href="#"><i class="bi bi-twitter text-white"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="text-center py-3" style="border-top: 1px solid #333; font-size: 0.9rem;">
+            <p class="mb-1 text-secondary">© 2025 ClothZy. All rights reserved.</p>
+
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

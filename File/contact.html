@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | ClothZy</title>
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Cloth<span style="color: #6c63ff;">Zy</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active text-white" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+          <!-- Dropdown starts here -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button" data-bs-toggle="dropdown">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="service.html">Services</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+            </ul>
+          </li>
+          <!-- Dropdown ends here -->
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="account.html"><i class="bi bi-person"></i>My Account</a></li>
+        </ul>
+        <a href="cart.html" class="btn btn-primary">
+          <i class="bi bi-cart"></i> Cart (<span id="cart-count">0</span>)
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="py-5 text-center text-white" style="background: linear-gradient(to right, #6c63ff, #5a52d1);">
+    <div class="container">
+      <h1 class="fw-bold">--Contact Us--</h1>
+      <p class="lead" style="font-family:'fantasy';">We would love to hear from you. Please reach out with any questions
+        or feedback!</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Image -->
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img src="https://limescreen.in/assets/img/portfolio/slider/1.jpg" alt="Contact Us"
+              class="img-fluid rounded shadow" style="height: 100%; width: 100%; object-fit: cover;">
+          </div>
+
+          <!-- Right Contact Form -->
+
+          <div class="col-md-6">
+            <!-- Contact Form -->
+            <div class="p-4 bg-white shadow-sm rounded mb-3">
+              <h3 class="mb-3" style="color:#6c63ff">
+                <i class="bi bi-envelope-paper-heart-fill me-2"></i>Get in Touch
+              </h3>
+              <form action="process_form.php" method="POST" enctype="multipart/form-data">
+                <!-- Name -->
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" placeholder="Your Full Name" name="fullname" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="Your Email Address" name="email" required>
+                </div>
+
+                <!-- Phone (Optional) -->
+                <div class="mb-3">
+                  <label class="form-label">Phone (Optional)</label>
+                  <input type="tel" class="form-control" placeholder="Your Phone Number" name="phone">
+                </div>
+
+                <!-- Order ID -->
+                <div class="mb-3">
+                  <label class="form-label">Order ID (if any)</label>
+                  <input type="text" class="form-control" placeholder="e.g. CZ123456" name="orderid">
+                </div>
+
+                <!-- Query Type -->
+                <div class="mb-3">
+                  <label class="form-label">Query Type</label>
+                  <select class="form-select" name="querytype">
+                    <option selected disabled>Select an option</option>
+                    <option>Order Related</option>
+                    <option>Return / Exchange</option>
+                    <option>Size or Fit Issue</option>
+                    <option>Payment / Refund</option>
+                    <option>General Inquiry</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-3">
+                  <label class="form-label">Your Message</label>
+                  <textarea class="form-control" rows="4" placeholder="Write your message here..." name="message" required></textarea>
+                </div>
+
+                <!-- Upload (Optional) -->
+                <div class="mb-3">
+                  <label class="form-label">Upload Screenshot / Invoice (Optional)</label>
+                  <input type="file" class="form-control" name="screenshot">
+                </div>
+
+                <!-- Submit Button -->
+                <button class="btn btn-primary w-100" style="background-color:#6c63ff; border-color:#6c63ff;">
+                  <i class="bi bi-send-fill"></i> Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Help Section -->
+            <div class="p-3 bg-light shadow-sm rounded">
+              <h5 class="text-dark mb-2">
+                <i class="bi bi-info-circle-fill me-2" style="color:#6c63ff"></i>Need Help?
+              </h5>
+              <p class="mb-1 text-dark">
+                <i class="bi bi-telephone me-2"></i><strong>Call:</strong> 1800-123-456
+              </p>
+              <p class="mb-0 text-dark">
+                <i class="bi bi-envelope me-2"></i><strong>Email:</strong> <a href=mailto:support@clothzy.com
+                  style="color:#6c63ff" ;> support@clothzy.com</a>
+              </p>
+              <p class="mb-0 text-dark">
+                <i class="bi bi-question-circle me-2"></i><strong>FAQs:</strong> <a href="#faq" style="color:#6c63ff" ;>
+                  Find answers to
+                  common questions</a>
+              </p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #0d0d0d; color: #ccc; padding-top: 50px; font-family: 'Segoe UI', sans-serif;">
+    <div class="container mb-5">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
+            <i class="bi bi-telephone-fill" style="font-size: 1.5rem; color: #6c63ff;"></i>
+            <h5 class="mt-2">Call Center</h5>
+            <p style="color: #6c63ff;">(222) 118 899 000</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
+            <i class="bi bi-truck" style="font-size: 1.5rem; color: #6c63ff;"></i>
+            <h5 class="mt-2">Free Delivery</h5>
+            <p>Free delivery on orders over $100</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div style="background-color: #1a1a1a; padding: 20px; border-radius: 8px;">
+            <i class="bi bi-gift-fill" style="font-size: 1.5rem; color: #6c63ff;"></i>
+            <h5 class="mt-2">Gift Cards</h5>
+            <p><span style="color: #6c63ff;">SAVE UP TO 20%</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center text-md-start pb-5">
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <h6 style="color: #fff;">Get to Know Us</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-secondary">About Us</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Our Services</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h6 style="color: #fff;">Customer Service</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-secondary">My Account</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Order Tracking</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Terms & Conditions</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h6 style="color: #fff;">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-secondary">Men's Wear</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Women's Wear</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Kid's Wear</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <h6 style="color: #fff;">Sign up to Newsletter</h6>
+          <form class="d-flex mb-3" style="gap: 5px;">
+            <input type="email" class="form-control" placeholder="Your Email Address..."
+              style="background-color: #1f1f1f; border: none; color: #ccc;">
+            <button type="submit" class="btn btn-primary" style="background-color:#6c63ff; border-color:#6c63ff;">
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </form>
+          <p class="small text-secondary">Stay up to date with all the latest offers and updates.</p>
+          <div class="d-flex gap-3">
+            <a href="#"><i class="bi bi-facebook text-white"></i></a>
+            <a href="#"><i class="bi bi-instagram text-white"></i></a>
+            <a href="#"><i class="bi bi-twitter text-white"></i></a>
+            <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center py-3" style="border-top: 1px solid #333; font-size: 0.9rem;">
+      <p class="mb-1 text-secondary">© 2025 ClothZy. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

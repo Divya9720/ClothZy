@@ -1,0 +1,477 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Courgette&family=Dancing+Script&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    font-family: 'Courgette', cursive;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: #6c63ff;
+    font-size: 2.5rem;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar-brand span {
+    color: #6c63ff;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #6c63ff;
+}
+
+.navbar-toggler {
+    border-color: #6c63ff;
+}
+
+.navbar-toggler-icon {
+    background-color: #6c63ff;
+}
+
+/* Top bar */
+.top-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Search */
+.search-box {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Card Styling */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-text {
+    color: #444;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.cart-page .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+    .cart-page .card img {
+        height: 100px;
+    }
+}
+
+/* Price Tags */
+.price {
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+.badge-price {
+    background-color: #6c63ff;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #6c63ff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #5a52d1;
+}
+
+/* Categories */
+#categories {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.category-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 20px;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.1);
+}
+
+/* Overlay */
+.category-image .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+    opacity: 0;
+}
+
+.category-card:hover .overlay {
+    opacity: 1;
+}
+
+.category-image .overlay h5 {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Gradient Overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.category-card:hover .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section Padding */
+section {
+    padding: 60px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .search-area {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .search-box,
+    .form-select {
+        margin-top: 0.5rem;
+    }
+
+    .product-img {
+        height: 220px;
+    }
+
+    .category-image {
+        height: 250px;
+    }
+
+    .category-image .overlay h5 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-img-top {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-img {
+        height: 180px;
+    }
+
+    .category-image {
+        height: 200px;
+    }
+
+    .category-image .overlay h5 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-img-top {
+        height: 220px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+}
+
+.img-box {
+    width: 130px;
+    height: 200px;
+    overflow: hidden;
+    transform: skew(-10deg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.img-box img {
+    width: 140%;
+    height: 100%;
+    object-fit: cover;
+    transform: skew(10deg) scale(1.5);
+    /* slight zoom to prevent gap */
+    transition: transform 0.3s ease;
+}
+
+.img-box:hover img {
+    transform: skew(10deg) scale(1.15);
+}
+
+.header {
+    background: linear-gradient(90deg, #6c63ff, #8577ff);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #6c63ff;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.square-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    margin-right: 0;
+}
+
+.square-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.square-img:hover {
+    transform: scale(1.05);
+}
+
+.account-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.account-sidebar {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 40px 25px;
+}
+
+.account-sidebar h3 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover {
+    background-color: #fff;
+    color: #6c63ff;
+}
+
+.account-content {
+    padding: 40px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 2px solid #6c63ff;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.account-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    border-color: #6c63ff;
+}
+
+.btn-primary:hover {
+    background-color: #584ef2;
+}
+
+@media (max-width: 768px) {
+    .account-container {
+        margin: 30px 15px;
+    }
+
+    .account-sidebar {
+        text-align: center;
+    }
+
+    .nav-pills .nav-link {
+        font-size: 16px;
+    }
+}

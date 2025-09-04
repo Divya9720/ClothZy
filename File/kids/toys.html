@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys - ClothZy</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">Cloth<span style="color: #6c63ff;">Zy</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active text-white" href="../products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="../categories.html">Categories</a></li>
+                              <!-- Dropdown starts here -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../service.html">Services</a></li>
+                            <li><a class="dropdown-item" href="../contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="../about.html">About Us</a></li>
+                        </ul>
+                    </li>
+                    <!-- Dropdown ends here --> 
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="account.html"><i class="bi bi-person"></i>My Account</a></li>
+        </ul>
+        <a href="../cart.html" class="btn btn-primary">
+          <i class="bi bi-cart"></i> Cart (<span id="cart-count">0</span>)
+        </a>
+
+      </div>
+    </div>
+  </nav>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" style="font-family: 'Dancing Script', cursive; color: #6c63ff;">-Toys
+                Collection-</h2>
+            <div class="row g-4">
+
+                <!-- Toy 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/61wT0PlAp4L._SL1500_.jpg"
+                            class="card-img-top" alt="Toy 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Soft Teddy Bear</h5>
+                            <p class="card-text">₹499</p>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Soft Teddy Bear" data-price="499"
+                                data-image="https://images-na.ssl-images-amazon.com/images/I/61wT0PlAp4L._SL1500_.jpg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toy 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="https://img.freepik.com/premium-photo/colorful-building-blocks-white_786587-778.jpg"
+                            class="card-img-top" alt="Toy 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Colorful Building Blocks</h5>
+                            <p class="card-text">₹799</p>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Colorful Building Blocks"
+                                data-price="799"
+                                data-image="https://img.freepik.com/premium-photo/colorful-building-blocks-white_786587-778.jpg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toy 3 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="https://toptoyusa.s3-accelerate.amazonaws.com/wp-content/uploads/2020/06/17162346/61D7lxIzTKL._AC_SL1334_.jpg"
+                            class="card-img-top" alt="Toy 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Remote Control Car</h5>
+                            <p class="card-text">₹1,299</p>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Remote Control Car"
+                                data-price="1,299"
+                                data-image="https://toptoyusa.s3-accelerate.amazonaws.com/wp-content/uploads/2020/06/17162346/61D7lxIzTKL._AC_SL1334_.jpg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toy 4 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="https://i5.walmartimages.com/asr/47f31fca-f68e-43be-9f04-15f1214c58b3.15c257edf373afc5c87ab02d7ce77319.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff"
+                            class="card-img-top" alt="Toy 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Educational Puzzle Set</h5>
+                            <p class="card-text">₹599</p>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Educational Puzzle Set"
+                                data-price="599"
+                                data-image="https://i5.walmartimages.com/asr/47f31fca-f68e-43be-9f04-15f1214c58b3.15c257edf373afc5c87ab02d7ce77319.jpeg?odnWidth=1000&odnHeight=1000&odnBg=ffffff">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toy 5 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="https://i5.walmartimages.com/asr/5d154f4e-59c0-4fb0-a43f-d209f610ae52.84350a2eafbd09d79db247d0c6151796.jpeg"
+                            class="card-img-top" alt="Toy 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Musical Toy Keyboard</h5>
+                            <p class="card-text">₹999</p>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Musical Toy Keyboard"
+                                data-price="999"
+                                data-image="https://i5.walmartimages.com/asr/5d154f4e-59c0-4fb0-a43f-d209f610ae52.84350a2eafbd09d79db247d0c6151796.jpeg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toy 6 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card">
+                        <img src="https://i5.walmartimages.com/asr/e374dcd9-2cd3-4c47-b49c-a6c206c3fd0d.c603a246f56db62a0e485d39173e080a.jpeg"
+                            class="card-img-top" alt="Toy 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Superhero Action Figure</h5>
+                            <p class="card-text">₹699</p>
+                            <a href="#" class="btn btn-primary add-to-cart" data-name="Superhero Action Figure"
+                                data-price="699"
+                                data-image="https://i5.walmartimages.com/asr/e374dcd9-2cd3-4c47-b49c-a6c206c3fd0d.c603a246f56db62a0e485d39173e080a.jpeg">
+                                Add to Cart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../main.js"></script>
+</body>
+
+</html>
